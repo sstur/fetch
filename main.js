@@ -1,8 +1,8 @@
-(function(self) {
+module.exports = function createFetch(XMLHttpRequest, self) {
   'use strict';
 
-  if (self.fetch) {
-    return
+  if (self == null) {
+    self = global
   }
 
   var support = {
@@ -365,11 +365,7 @@
     return new Response(null, {status: status, headers: {location: url}})
   }
 
-  self.Headers = Headers
-  self.Request = Request
-  self.Response = Response
-
-  self.fetch = function(input, init) {
+  function fetch(input, init) {
     return new Promise(function(resolve, reject) {
       var request
       if (Request.prototype.isPrototypeOf(input) && !init) {
@@ -429,5 +425,12 @@
       xhr.send(typeof request._bodyInit === 'undefined' ? null : request._bodyInit)
     })
   }
-  self.fetch.polyfill = true
-})(typeof self !== 'undefined' ? self : this);
+  fetch.polyfill = true
+
+  return {
+    Headers: Headers,
+    Request: Request,
+    Response: Response,
+    fetch: fetch
+  }
+}
