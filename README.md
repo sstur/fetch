@@ -1,3 +1,13 @@
+# A polyfill for "fetch()" that uses "XMLHttpRequest"
+
+[What is "fetch()"](https://developer.mozilla.org/en/docs/Web/API/Fetch_API)
+
+This is forked from Github's excellent [fetch polyfill](https://github.com/github/fetch). The difference is that this version doesn't touch any globals.
+
+We use this with a fork of [pretender](https://github.com/sstur/pretender) for testing our UI and the data fetching logic therein.
+
+The original readme follows:
+
 # window.fetch polyfill
 
 This project adheres to the [Open Code of Conduct][code-of-conduct]. By participating, you are expected to uphold this code.
