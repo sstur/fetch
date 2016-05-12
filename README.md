@@ -4,7 +4,7 @@
 
 This is forked from Github's excellent [fetch polyfill](https://github.com/github/fetch). The difference is that this version doesn't touch any globals.
 
-We use this with a fork of [pretender](https://github.com/sstur/pretender) for testing our UI and the data fetching logic therein.
+We use this with [fetch-pretender](https://github.com/sstur/fetch-pretender) for testing our UI and the data fetching logic therein.
 
 The original readme follows:
 
