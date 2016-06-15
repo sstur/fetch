@@ -2,7 +2,7 @@
   "name": "fetchme",
   "description": "A polyfill for fetch() that uses XMLHttpRequest",
   "version": "2.0.0",
-  "main": "fetch.js",
+  "main": "main.js",
   "repository": "sstur/fetchme",
   "license": "MIT",
   "devDependencies": {
